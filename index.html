@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lochquarry Outdoor Centre</title>
+    
+        <style>
+            body{background-color:#fdf3ea;}
+
+            #land-activities{color:#207a47;}
+            #water-activities{color:#1E90FF;}
+            #rope-activities{color:rgb(243, 110, 15)}
+            #About{color:rgb(245, 183, 11);}
+
+            body{font-family: 'Baloo 2', cursive;} 
+
+            H1{color:rgb(245, 183, 11);
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-right: 150px;
+                margin-left: 80px;
+            }
+
+            p {
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-right: 150px;
+                margin-left: 80px;
+                }
+
+            nav {
+                position: sticky;
+                top: 30%;
+                float: right;
+                }
+
+            #banner {
+                margin: 20px;
+                display: block;
+                margin: auto;
+                width:75vw;
+                }
+
+                
+            a{text-align:center}
+            #book-now{color:#207a47}
+
+            ul{text-align:center}
+            ul{list-style-type: none;}
+
+        </style>
+
+    </head>
+<body>
+
+    <header>
+
+    <img src="Images/Banner.png" alt="banner"> 
+
+<!--NAVAGATION BAR SECTION-->  
+
+ <nav class="tab-buttons" role="tablist">
+
+        <button class="tab-btn active" data-tab="tab1" role="tab"><a href="Land_Activities.html" h2 id="land-activities"> Land Activities</a></h2></button>
+
+        <button class="tab-btn" data-tab="tab2" role="tab"><a href="Water_Activities.html" h2 id="water-activities"> Water Activities</a></h2></button>
+
+        <button class="tab-btn" data-tab="tab3" role="tab"><a href="Rope_Activities.html" h2 id="rope-activities">Rope Activities</a></h2></button>
+
+        <button Class="about" data-tab="tab4" role="tab"><a href="About.html" h2 id="About">About</a></h2></button>
+
+        </nav>
+
+        </header>
+
+    <main>
+
+    <h1>LOCHQUARRY OUTDOOR CENTRE</h1>
+   
+    <p><strong>Get ready for adventure at Lochquarry Outdoor Centre!</strong> Designed for young people aged <em>6–18</em>, Lochquarry is bursting with action, laughter and unforgettable outdoor experiences. From thrilling land‑based challenges and splash‑tastic water activities to high‑flying rope adventures, there’s something for everyone to enjoy. Whether you’re visiting with Scouts, Guides or school groups, our friendly, expert staff make every session safe, exciting and confidence‑boosting. Dive in, get active, and discover why Lochquarry is the perfect place to explore, challenge yourself and have loads of fun outdoors!<br></p>
+
+    <!-- INTERACTIVE REVIEWS SECTION-->
+
+<div style="margin: 20px; text-align: center;">
+    <button onclick="toggleReview()" style="padding: 10px 20px; background-color: #e05408; color: #fdf3ea; border: none; border-radius: 5px; cursor: pointer; font-family: 'Baloo 2', cursive;">
+        Our Customers Say It All ⭐️
+    </button>
+
+    <div id="reviewContent" style="display: none; margin-top: 20px; background: #fdf3ea; padding: 20px; font-style: Baloo 2; text-align: left;">
+        <p>
+        <ul>
+            <li>"Lochquarry was amazing! The instructors made the high ropes so much fun even though I was scared at first. Best school trip ever!"<strong>- Sarah, Age 14</strong></li>
+            <li>‘The kids had a ball and didn’t want to leave’ <strong> - Mr Evans, PE teacher</strong></li>
+            <li>‘I would definitely come back’ − <strong> - Kelly, aged 9</strong></li>
+    
+        </ul>
+        </p>
+     </div>
+    </main>
+
+   <footer>
+    <img src="Images/home-page-banner.png" id="banner" alt="activity banner"> 
+    
+    <!--Link to WhatsApp Web -->
+    <a id="book-now" href="https://wa.me/4414752298311" target="_blank"><h2>Book Now</h2></a>
+    </footer>
+
+
+<!--INTERACTIVE JUMP TO TOP SECTION-->
+<button id="topBtn" onclick="scrollToTop()" style="display:none; position:fixed; bottom:20px; right:20px; z-index:99; background-color:#207a47; color:white; border:none; padding:10px; cursor:pointer; border-radius:5px;">Top ↑</button>
+
+
+<!--JAVASCRIPT 1ST JUMP TO TOP SECTION 2ND CUSTOMER REVIEW-->
+
+<script>
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("topBtn").style.display = "block";
+    } else {
+        document.getElementById("topBtn").style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function toggleReview() {
+    var review = document.getElementById("reviewContent");
+    
+    if (review.style.display === "none") {
+        review.style.display = "block";
+        // Optional: Change the button text when it opens
+        event.target.innerHTML = "Hide Reviews";
+    } else {
+        review.style.display = "none";
+        event.target.innerHTML = "Show Customer Reviews";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Activities | Lochquarry Outdoor Centre</title>
+
+    <style>
+    body{background-color:#fdf3ea;}
+
+    #Home{color:#207a47;}
+    #water-activities{color:#1E90FF;}
+    #rope-activities{color:rgb(243, 110, 15)}
+    #About{color:rgb(82, 60, 0);}
+
+    body{font-family: 'Baloo 2', cursive;}  
+
+    h3{color:#158bb9; text-align: center;}
+    p{color:rgb(44, 35, 9); text-align: center;}
+    h1{color:rgb(199, 32, 54)}
+    #opening-line{text-align: left;}
+
+    a{text-align:right;}
+    #book-now{color:#207a47;
+        position: sticky;
+        top: 30%;
+        float: right;
+        }
+    #archery-banner {
+        margin: 20px;
+        display: block;
+        margin: auto;
+        width:75vw;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #hillwalking-banner {
+        margin: 20px;
+        display: block;
+        margin: auto;
+        width:75vw;
+    }
+    
+    body, html {
+        height: 100%;
+    }
+    #reviewContent{list-style-type: none;}
+
+    /* Fixed Parallax Links to matching illustration files */
+    .parallax1 {
+      background-image: url("Images/archery.png");
+      min-height: 500px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .parallax2 {
+      background-image: url("Images/hillwalking.png");
+      min-height: 500px;
+      background-attachment: fixed;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+</style>
+
+</head>
+<body>
+
+    
+<div class="parallax1"></div>
+
+   <header>
+    <img src="Images/Banner.png" alt="banner"> 
+
+
+        <nav class="tab-buttons" role="tablist">
+
+            <button class="tab-btn active" data-tab="tab1" role="tab"><a href="index.html" h2 id="Home">Home</a></h2></button>
+    
+            <button class="tab-btn" data-tab="tab2" role="tab"><a href="Water_Activities.html" h2 id="water-activities"> Water Activities</a></h2></button>
+    
+            <button class="tab-btn" data-tab="tab3" role="tab"><a href="Rope_Activities.html" h2 id="rope-activities">Rope Activities</a></h2></button>
+    
+            <button Class="about" data-tab="tab4" role="tab"><a href="About.html" h2 id="About">About</a></h2></button>
+    
+        </nav>
+        <div><a id="book-now" a href="https://wa.me/4414752298311" target="_blank"><h2>Book Now</h2></a></div>
+
+    </header>
+
+    <main>
+
+        <h1> Lochquarry: Land Activities</h1>
+
+        <h3>Archery</H3>
+            <p>Are you the next Robin Hood? Learn to hold a bow and fire an arrow and take part in fast and fun shootout competitions. Max group size 6. Ages 6+</p> 
+
+        <h3>Orienteering</H3>
+        <p>Set in the centre’s grounds, find all the markers and make it back in time to show off your superior navigation knowledge. Groups of 2+, one map per group. Ages 6+</p>
+        
+        <h3>Hillwalking</H3>
+        <p>From short walks around the site to Munro-bagging expeditions, Lochquarry has it all! Walks can be tailored to suit any age or experience of groups and can last from one hour to all day adventures. Max group size 12 and Ages 6+</p>
+
+        <h3>Axe Throwing</H3>
+        <p>Take yourself back to a time of Vikings and have a go at throwing an axe. Try to hit the target, better yet throw yourself a bullseye. Max group size 6. Ages 10+</p>
+
+
+    </main>
+
+ <footer>
+    <div style="margin: 20px; text-align: center;">
+        <button onclick="toggleReview()" style="padding: 10px 20px; background-color: #e05408; color: #fdf3ea; border: none; border-radius: 5px; cursor: pointer; font-family: 'Baloo 2', cursive;">
+            Our Customers Say It All ⭐️
+        </button>
+    
+        <div id="reviewContent" style="display: none; margin-top: 20px; background: #fdf3ea; padding: 20px; font-style: Baloo 2; text-align: left;">
+            <p>
+            <ul>
+                <li>‘We had a great time and loved all the different activities that we did’− 8th Gourock Guides</li>
+                <li>‘The kids had a ball and didn’t want to leave’- Mr Evans, PE teacher</li>
+                <li>‘I would definitely come back’- Kelly, aged 9</li>
+            </ul>
+            </p>
+        </div>
+    </div>
+</footer>
+
+ <button id="topBtn" onclick="scrollToTop()" style="display:none; position:fixed; bottom:20px; right:20px; z-index:99; background-color:#207a47; color:white; border:none; padding:10px; cursor:pointer; border-radius:5px;">Top ↑</button>
+
+ <div class="parallax2"></div>
+
+<script>
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("topBtn").style.display = "block";
+    } else {
+        document.getElementById("topBtn").style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function toggleReview() {
+    var review = document.getElementById("reviewContent");
+    
+    if (review.style.display === "none") {
+        review.style.display = "block";
+        // Optional: Change the button text when it opens
+        event.target.innerHTML = "Hide Reviews";
+    } else {
+        review.style.display = "none";
+        event.target.innerHTML = "Show Customer Reviews";
+    }
+}
+
+</script>
+
+</body>
+</html>
+
+

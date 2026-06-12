@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rope Activities | Lochquarry Outdoor Centre</title>
+        
+
+        <style>
+    body {
+        background-color:#fdf3ea;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    #land-activities{color:#207a47;}
+    #Home{color:hsl(23, 79%, 43%);}
+    #water-activities{color:#1E90FF;}
+    #About{color:rgb(216, 185, 61);}
+
+    body{font-family: 'Baloo 2', cursive;} 
+
+    h1{color:rgb(199, 32, 54)}
+    h3{color:rgb(243, 110, 15)}
+
+    /* Footer where book now button is */
+    footer {
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    #book-now {
+        background-color: rgb(216, 185, 61);
+        color: rgb(214, 84, 24);
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 1.5rem;
+        transition: transform 0.2s;
+        display: inline-block;
+    }
+
+    #book-now:hover { transform: scale(1.05)}
+    .parent { text-align: left; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    #review-title{color:dodgerblue;}
+    #climbing-banner{position:absolute; z-index:1;}
+    #reviews{position: absolute; top: 400px; text-align: right; list-style: none; width: 100%;}
+
+    /* Fixed Image reference to matching ropes asset */
+    #index_body {
+        background-image: url('Images/ropes.png');
+        background-repeat: no-repeat;
+        background-position: 0% 20vw;
+    }
+    
+    #reviews-list{list-style-type: none;}
+</style>
+
+        <link rel="stylesheet" href="/css/main.css">
+
+   <body id="index_body">
+    <header>
+        <img id="banner" src="Images/Banner.png" alt="banner"> 
+
+            <img id="banner" src="Images/Banner.gif" alt="banner"> 
+            <nav class="tab-buttons" role="tablist">
+                <button class="tab-btn active" data-tab="tab1" role="tab"><a href="index.html" h2 id="Home">Home</a></h2></button>
+                <button class="tab-btn active" data-tab="tab1" role="tab"><a href="Land_Activities.html" h2 id="land-activities"> Land Activities</a></h2></button>
+                <button class="tab-btn" data-tab="tab2" role="tab"><a href="Water_Activities.html" h2 id="water-activities"> Water Activities</a></h2></button>
+                <button Class="about" data-tab="tab4" role="tab"><a href="About.html" h2 id="About">About</a></h2></button>
+            </nav>
+
+        </header>
+
+        <main>
+            
+            <h1>Lochquarry: Rope Activities</h1>
+
+            <div style="margin: 20px; text-align: right;">
+                <button onclick="toggleReview()" style="padding: 10px 20px; background-color: #e05408; color: #fdf3ea; border: none; border-radius: 5px; cursor: pointer; font-family: 'Baloo 2', cursive;">
+                    Our Customers Say It All ⭐️
+                </button>
+            
+                <div id="reviewContent" style="display: none; margin-top: 20px; background: #fdf3ea; padding: 20px; font-style: Baloo 2; text-align: right;">
+                    <p>
+                    <ul id="reviews-list">
+                        <li>‘Thank you to all the staff who worked so hard, in awful weather, to make sure that all the pupils had an amazing experience’− Mrs Kahn, Hillend Primary School</li>
+                        <li>‘The kids had a ball and didn’t want to leave’ - Mr Evans, PE teacher</li>
+                        <li>‘I would definitely come back’ - Kelly, aged 9</li>
+                
+                    </ul>
+                    </p>
+                 </div>
+            </div>
+
+        
+            <p><em>All rope-based activities take place on site with full safety equipment provided.</em></p>
+
+            <h3>Climbing</h3>
+            Scale the highs of one of the local quarry slabs. Max group size 8. Ages 8+
+
+            <h3>Abseiling</h3>
+            Take the scary step and abseil from the top of one of the local quarry slabs.<br> There is a lovely view... if you are brave enough to look down! Max group size 8. Ages 8+
+
+            <h3>Pole Climb</h3>
+            Ever wondered how telephone engineers get to the top of the telephone poles?<br> Well, here’s your chance to find out. Max group size 8. Ages 8+
+
+        </main>
+
+        <footer>
+            <div class="parent">
+                <a id="book-now" href="https://wa.me/4414752298311" target="_blank">Book Now</a>
+            </div> 
+        </footer>
+
+        <button id="topBtn" onclick="scrollToTop()" style="display:none; position:fixed; bottom:20px; right:20px; z-index:99; background-color:#207a47; color:white; border:none; padding:10px; cursor:pointer; border-radius:5px;">Top ↑</button>
+
+        <script>
+            window.onscroll = function() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    document.getElementById("topBtn").style.display = "block";
+                } else {
+                    document.getElementById("topBtn").style.display = "none";
+                }
+            };
+
+            function scrollToTop() {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+            function toggleReview() {
+    var review = document.getElementById("reviewContent");
+    
+    if (review.style.display === "none") {
+        review.style.display = "block";
+        // Optional: Change the button text when it opens
+        event.target.innerHTML = "Hide Reviews";
+    } else {
+        review.style.display = "none";
+        event.target.innerHTML = "Show Customer Reviews";}
+    }
+        </script>
+
+    </body>
+</html>

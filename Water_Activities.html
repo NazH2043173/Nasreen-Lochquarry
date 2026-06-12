@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Activities | Lochquarry Outdoor Centre</title>
+
+    <style>
+        body{background-color:#fdf3ea;}
+
+        #land-activities{color:#207a47;}
+        #Home{color:hsl(202, 91%, 48%);}
+        #rope-activities{color:rgb(243, 110, 15)}
+        #About{color:rgb(153, 139, 14);}
+
+        body{font-family: 'Baloo 2', cursive;} 
+
+        h1{color:rgb(199, 32, 54)}
+        h3{color:#1E90FF;}
+       
+        a{text-align:center}
+        #book-now{color:#207a47; 
+            position: sticky;
+            top: 30%;
+            float: right;
+            }
+    
+        /* Fixed Parallax Link to your water activity illustration */
+        .parallax2 {
+          background-image: url("Images/water-activities.png");
+          min-height: 500px;
+          min-width: 100px;
+          background-attachment: fixed;
+          background-position: center bottom;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Fixed Header Logo Link -->
+        <img src="Images/Banner.png" alt="banner"> 
+
+        <nav class="tab-buttons" role="tablist">
+            <button class="tab-btn active" data-tab="tab1" role="tab"><a href="index.html" h2 id="Home">Home</a></h2></button>
+            <button class="tab-btn active" data-tab="tab1" role="tab"><a href="Land_Activities.html" h2 id="land-activities"> Land Activities</a></h2></button>
+            <button class="tab-btn" data-tab="tab3" role="tab"><a href="Rope_Activities.html" h2 id="rope-activities">Rope Activities</a></h2></button>
+            <button Class="about" data-tab="tab4" role="tab"><a href="About.html" h2 id="About">About</a></h2></button>
+        </nav>
+
+        <div><a id="book-now" href="https://wa.me/4414752298311" target="_blank"><h2>Book Now</h2></a></div>
+    </header>
+
+<main>
+
+    <h1>Lochquarry: Water Acitivities</h1>
+
+<p><em>Water-based activities all take place on Lochquarry itself.<br>
+
+    <h3>Kayaking</h3>
+    Have a go at paddling, rolling and rafting in one of our brand new kayaks. Max group size 8. Ages 8+
+    
+    <h3>Canoeing</h3>
+    Work single-handedly or in pairs to canoe the length of Lochquarry. You can even take a picnic with you and explore some of the Loch’s islands. Max group size 8 boats (up to 16 people). Ages 6+
+    
+    <h3>Powerboating</h3>
+    Take control of one of the Centre’s two RIBs out on Lochquarry and try your hand powerboating. Max group size 6. Ages 12+
+</p>
+
+    <!-- INTERACTIVE REVIEWS SECTION-->
+
+    <div style="margin: 20px; text-align: center;">
+        <button onclick="toggleReview()" style="padding: 10px 20px; background-color: #e05408; color: #fdf3ea; border: none; border-radius: 5px; cursor: pointer; font-family: 'Baloo 2', cursive;">
+            Our Customers Say It All ⭐️
+        </button>
+    
+        <div id="reviewContent" style="display: none; margin-top: 20px; background: #fdf3ea; padding: 20px; font-style: Baloo 2; text-align: left;">
+            <p>
+            <ul>
+                <li>‘Thank you to all the staff who worked so hard, in awful weather, to make sure that all the pupils had an amazing experience’− Mrs Kahn, Hillend Primary School</li>
+                <li>‘The kids had a ball and didn’t want to leave’ - Mr Evans, PE teacher</li>
+                <li>‘I would definitely come back’ - Kelly, aged 9</li>
+        
+            </ul>
+            </p>
+         </div>
+    </div>
+
+</main>
+
+<footer>
+
+    
+   
+</footer>
+
+<div class="parallax2"></div>
+
+
+
+<button id="topBtn" onclick="scrollToTop()" style="display:none; position:fixed; bottom:20px; right:20px; z-index:99; background-color:#207a47; color:white; border:none; padding:10px; cursor:pointer; border-radius:5px;">Top ↑</button>
+
+<script>
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("topBtn").style.display = "block";
+    } else {
+        document.getElementById("topBtn").style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function toggleReview() {
+    var review = document.getElementById("reviewContent");
+    
+    if (review.style.display === "none") {
+        review.style.display = "block";
+        // Optional: Change the button text when it opens
+        event.target.innerHTML = "Hide Reviews";
+    } else {
+        review.style.display = "none";
+        event.target.innerHTML = "Show Customer Reviews";}
+    }
+</script>
+
+</body>
+</html>
